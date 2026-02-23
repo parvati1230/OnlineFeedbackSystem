@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Feedback Form</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body {
+     font-family: Arial, sans-serif;
+      background: lightblue; 
+      padding:20px;
+      }
+    .container {
+     max-width:700px;
+     margin:30px auto;
+     background:white;
+     padding:20px; 
+     border-radius:8px; 
+     box-shadow:0 2px 8px black;
+     }
+    label { 
+    display:block;
+    margin-top:12px; 
+    font-weight:600; 
+    }
+    input[type="text"], input[type="email"], select, textarea {
+      width:100%; 
+      padding:8px; 
+      margin-top:6px; 
+      border:1px solid #ccc;
+      border-radius:4px;
+    }
+    textarea {
+     min-height:120px;
+     resize:vertical; 
+     }
+    .row { 
+     display:flex;
+     gap:10px;
+      }
+    .col { flex:1; }
+  .btn-primary:hover {
+    background-color: blue;
+}
+.center-btn {
+  display: block;
+  margin: 0 auto;
+  background:blue; 
+    color:white; 
+    border:none;
+    padding:10px 16px; 
+    border-radius:6px; 
+    cursor:pointer; 
+}
+h2{
+    color:blue;
+    text-align: center;
+  
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 >Student Feedback Form</h2>
+    <form action="SubmitFeedback.jsp" method="post" accept-charset="UTF-8">
+      <label for="student_name">Student Name *</label>
+      <input type="text" id="student_name" name="student_name" required maxlength="150" />
+
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required maxlength="150" />
+
+      <label for="course">Course</label>
+      <select id="course" name="course" required>
+        <option >-- Select Course --</option>
+        <option>Java Full Stack</option>
+        <option >Python Full Stack</option>
+        <option >UI Full Stack</option>
+        <option >.Net full Stack</option>
+        <option >Data Science with Gen AI</option>
+      </select>
+      
+
+      <label for="faculty">Faculty</label>
+      <input type="text" id="faculty" name="faculty" maxlength="150" />
+
+      <label for="rating">Rating *</label>
+      <select id="rating" name="rating" required>
+        <option value="">-- Select rating --</option>
+        <option value="5">5 - Excellent</option>
+        <option value="4">4 - Very Good</option>
+        <option value="3">3 - Good</option>
+        <option value="2">2 - Fair</option>
+        <option value="1">1 - Poor</option>
+      </select>
+
+      <label for="comment">Comment</label>
+      <textarea id="comment" name="comment" maxlength="1000" placeholder="Your suggestions or comments..."></textarea>
+
+      <button type="submit" class="center-btn ">Submit Feedback</button>
+      
+    </form>
+  </div>
+</body>
+</html>
